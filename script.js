@@ -1,9 +1,6 @@
-const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz-x3_Eyp3vCcntNm11kWATjTSslEzdffIViYaO5a1KLt17JwO40XAypT8FycdXsLGINQ/exec';
-
+const WEB_APP_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
 let allJobs = [];
 let editingJobId = null;
-
-// Global Filter State Engine
 const filterState = {
   searchQuery: '',
   sector: '',
@@ -30,12 +27,11 @@ async function fetchJobs() {
     console.error('Error fetching jobs:', error);
     grid.innerHTML = `
       <div class="loading-container">
-        <p>⚠️ Failed to load jobs. Please verify network connection or API URL.</p>
+        <p>⚠️ Failed to load jobs. Please verify network connection or retry.</p>
         <button class="btn btn-secondary" onclick="fetchJobs()">Try Again</button>
       </div>`;
   }
 }
-
 function showSkeletonLoader(container) {
   container.innerHTML = Array(6).fill(0).map(() => `
     <div class="skeleton-card">
@@ -51,7 +47,6 @@ function showSkeletonLoader(container) {
     </div>
   `).join('');
 }
-
 function renderJobs(jobs) {
   const grid = document.getElementById('jobsGrid');
   grid.innerHTML = '';
@@ -155,8 +150,6 @@ function setupEventListeners() {
     });
   }
 }
-
-/* Modal Management & Cross Button Controllers */
 function setupModalBackdropListeners() {
   document.querySelectorAll('.modal-backdrop').forEach(modal => {
     modal.addEventListener('click', (e) => {
@@ -224,8 +217,6 @@ function closeFilterModal() {
   const modal = document.getElementById('filterModal');
   if (modal) modal.classList.remove('active');
 }
-
-/* Detail Modal Window */
 function openDetailModal(id) {
   const job = allJobs.find(j => j.id === id);
   if (!job) return;
@@ -283,8 +274,6 @@ function closeDetailModal() {
   const modal = document.getElementById('detailModal');
   if (modal) modal.classList.remove('active');
 }
-
-/* Unified Filter Engine */
 function applyFilters() {
   closeFilterModal();
   
@@ -377,8 +366,6 @@ function applyCombinedFilters() {
 
   renderJobs(filtered);
 }
-
-/* Numeric Parsing Utilities */
 function parseMaxPay(payStr) {
   if (!payStr) return 0;
   const matches = payStr.match(/\d+(\.\d+)?/g);
