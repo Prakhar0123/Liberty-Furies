@@ -28,7 +28,7 @@ async function fetchJobs() {
     console.error('Error fetching jobs:', error);
     grid.innerHTML = `
       <div class="loading-container">
-        <p>⚠️ Failed to load jobs. Please verify network connection or retry.</p>
+        <p>⚠️ Failed to load jobs. Please verify network connection or API URL.</p>
         <button class="btn btn-secondary" onclick="fetchJobs()">Try Again</button>
       </div>`;
   }
@@ -63,7 +63,9 @@ function renderJobs(jobs) {
       </div>`;
     return;
   }
+
   const isHome = window.location.pathname.includes('home.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+
   jobs.forEach(job => {
     const card = document.createElement('div');
     card.className = 'job-card';
