@@ -23,6 +23,6 @@ Open script.js & replace the placeholder URL in the WEB_APP_URL constant with yo
 ___
 New updates to be rolled out very soon.
 
-You can connect with me on:
+You can connect with me on:\
 Gmail- checkoutprakhar@gmail.com\
 Linkedin- https://www.linkedin.com/in/prakhar-kushwaha
