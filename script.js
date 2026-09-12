@@ -63,7 +63,7 @@ function renderJobs(jobs) {
       </div>`;
     return;
   }
-const isHome = window.location.pathname.includes('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/KARMA/');
+  const isHome = window.location.pathname.includes('home.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
   jobs.forEach(job => {
     const card = document.createElement('div');
     card.className = 'job-card';
