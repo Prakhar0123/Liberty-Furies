@@ -1,4 +1,5 @@
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz-x3_Eyp3vCcntNm11kWATjTSslEzdffIViYaO5a1KLt17JwO40XAypT8FycdXsLGINQ/exec';
+
 let allJobs = [];
 let editingJobId = null;
 const filterState = {
@@ -32,6 +33,7 @@ async function fetchJobs() {
       </div>`;
   }
 }
+
 function showSkeletonLoader(container) {
   container.innerHTML = Array(6).fill(0).map(() => `
     <div class="skeleton-card">
@@ -47,6 +49,7 @@ function showSkeletonLoader(container) {
     </div>
   `).join('');
 }
+
 function renderJobs(jobs) {
   const grid = document.getElementById('jobsGrid');
   grid.innerHTML = '';
@@ -264,7 +267,7 @@ function openDetailModal(id) {
     ? `<button type="button" class="btn btn-secondary" onclick="closeDetailModal()">Close</button>
        <a href="${escapeHtml(job.link)}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Apply ↗</a>`
     : `<button type="button" class="btn btn-secondary" onclick="closeDetailModal()">Close</button>
-       <button type="button" class="btn btn-primary" onclick="closeDetailModal(); openEditModal('${job.id}');">✏️ Edit Job</button>`;
+       <button type="button" class="btn btn-primary" onclick="closeDetailModal(); openEditModal('${job.id}');">✏️</button>`;
 
   const modal = document.getElementById('detailModal');
   if (modal) modal.classList.add('active');
