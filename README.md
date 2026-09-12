@@ -1,3 +1,7 @@
+Access Link for:
+- Admin: https://prakhar0123.github.io/KARMA/
+- User: https://prakhar0123.github.io/KARMA/home.html
+
 ## Setup & Deployment Instructions:
 
 **1. Google Sheets Setup**
