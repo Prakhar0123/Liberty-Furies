@@ -1,5 +1,5 @@
 Access Link for:
-- Admin: https://prakhar0123.github.io/KARMA/index.html
+- Admin: https://prakhar0123.github.io/KARMA/
 - User: https://prakhar0123.github.io/KARMA/home.html
 
 ## Setup & Deployment Instructions:
@@ -19,4 +19,10 @@ Access Link for:
 - Authorize the script when prompted and copy the generated Web App URL.
 
 **3. Frontend Configuration**
-Open script.js & replace the placeholder URL in the WEB_APP_URL constant with your deployed Google Apps Script Web App URL:
+Open script.js & replace the placeholder URL in the WEB_APP_URL constant with your deployed Google Apps Script Web App URL
+___
+New updates to be rolled out very soon.
+
+You can connect with me on:
+Gmail- checkoutprakhar@gmail.com
+Linkedin- https://www.linkedin.com/in/prakhar-kushwaha
