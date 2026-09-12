@@ -1,5 +1,5 @@
 Access Link for:
-- Admin: https://prakhar0123.github.io/KARMA/
+- Admin: https://prakhar0123.github.io/KARMA/index.html
 - User: https://prakhar0123.github.io/KARMA/home.html
 
 ## Setup & Deployment Instructions:
