@@ -63,9 +63,7 @@ function renderJobs(jobs) {
       </div>`;
     return;
   }
-
-  const isHome = window.location.pathname.includes('home.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
-
+const isHome = window.location.pathname.includes('home.html');
   jobs.forEach(job => {
     const card = document.createElement('div');
     card.className = 'job-card';
@@ -261,8 +259,7 @@ function openDetailModal(id) {
   `;
 
   document.getElementById('detailDescription').innerText = job.description || 'No detailed description provided.';
-
-  const isHome = window.location.pathname.includes('home.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+const isHome = window.location.pathname.includes('home.html');
   document.getElementById('detailFooter').innerHTML = isHome 
     ? `<button type="button" class="btn btn-secondary" onclick="closeDetailModal()">Close</button>
        <a href="${escapeHtml(job.link)}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Apply ↗</a>`
