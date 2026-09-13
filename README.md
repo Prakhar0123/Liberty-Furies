@@ -5,8 +5,8 @@ Access Link for:
 ## Setup & Deployment Instructions:
 
 **1. Google Sheets Setup**
-- Create a new Google Sheet named Jobs.
-- In the first row (Header), add the following exact column titles from column A to I: id, date, role, company, sector, experience, pay, description, link
+- Create a new Google Sheet named *Jobs*.
+- In the first row (Header), add the exact column titles from column A to I: id, date, role, company, sector, experience, pay, description, link
 
 **2. Google Apps Script Backend**
 - In your Google Sheet, click on Extensions > Apps Script.
