@@ -1,17 +1,14 @@
 :root {
-  --primary: #4f46e5;
-  --primary-hover: #4338ca;
-  --primary-light: #eef2ff;
-  --primary-ring: rgba(79, 70, 229, 0.22);
+  --primary: #990f02;
+  --primary-hover: #7a0c02;
+  --primary-light: #fdf2f2;
+  --primary-ring: rgba(153, 15, 2, 0.22);
   --bg: #f8fafc;
   --card-bg: #ffffff;
   --text: #0f172a;
   --text-muted: #64748b;
   --border: #e2e8f0;
   --border-hover: #cbd5e1;
-  --accent-emerald: #10b981;
-  --accent-emerald-light: #ecfdf5;
-  --accent-emerald-text: #047857;
   --shadow-xs: 0 1px 3px rgba(15, 23, 42, 0.04);
   --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.06);
   --shadow-md: 0 16px 32px -8px rgba(15, 23, 42, 0.10);
@@ -39,66 +36,48 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.90);
-  padding: 0.85rem 2rem;
+  flex-wrap: nowrap;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.75rem 1.5rem;
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow-xs);
+  gap: 1rem;
 }
 
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 .logo {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--text);
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
 }
 
-.logo-icon {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
-  color: #fff;
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 800;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+  box-shadow: 0 3px 8px rgba(153, 15, 2, 0.25);
+  transition: transform 0.2s ease;
 }
 
-.logo-accent {
-  color: var(--primary);
-}
-
-.admin-badge {
-  font-size: 0.7rem;
-  font-weight: 700;
-  background: var(--primary-light);
-  color: var(--primary);
-  padding: 0.15rem 0.5rem;
-  border-radius: 20px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
 .nav-right {
   display: flex;
   gap: 0.75rem;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .search-wrapper {
@@ -118,7 +97,7 @@ body {
   padding: 0.65rem 1rem 0.65rem 2.5rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  width: 300px;
+  width: 280px;
   font-size: 0.875rem;
   background: #f1f5f9;
   transition: all 0.22s ease;
@@ -129,7 +108,7 @@ body {
   border-color: var(--primary);
   background: #ffffff;
   box-shadow: 0 0 0 3.5px var(--primary-ring);
-  width: 320px;
+  width: 300px;
 }
 
 .container {
@@ -177,13 +156,13 @@ body {
 .btn-primary {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.28);
+  box-shadow: 0 3px 10px rgba(153, 15, 2, 0.28);
 }
 
 .btn-primary:hover {
   background: var(--primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 5px 14px rgba(79, 70, 229, 0.38);
+  box-shadow: 0 5px 14px rgba(153, 15, 2, 0.38);
 }
 
 .btn-secondary {
@@ -255,7 +234,7 @@ body {
   width: 46px;
   height: 46px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  background: linear-gradient(135deg, #fdf2f2 0%, #fecaca 100%);
   color: var(--primary);
   display: flex;
   align-items: center;
@@ -304,8 +283,9 @@ body {
 }
 
 .badge-pay {
-  background: var(--accent-emerald-light);
-  color: var(--accent-emerald-text);
+  background: #fdf2f2;
+  color: #990f02;
+  border: 1px solid rgba(153, 15, 2, 0.15);
 }
 
 .job-desc-preview {
@@ -423,7 +403,7 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  background: linear-gradient(135deg, #fdf2f2 0%, #fecaca 100%);
   color: var(--primary);
   display: flex;
   align-items: center;
@@ -659,25 +639,17 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.85rem;
-    padding: 0.85rem 1rem;
-  }
-  .nav-left {
-    justify-content: space-between;
-  }
-  .nav-right {
-    width: 100%;
-  }
-  .search-wrapper {
-    flex: 1;
+    padding: 0.65rem 0.85rem;
+    gap: 0.5rem;
   }
   .search-input {
-    width: 100%;
+    width: 150px;
   }
   .search-input:focus {
-    width: 100%;
+    width: 170px;
+  }
+  .btn-label-text {
+    display: none;
   }
   .container {
     padding: 0 1rem;
