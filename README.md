@@ -1,6 +1,6 @@
 Access Link for:
-- Admin: https://prakhar0123.github.io/KARMA/
-- User: https://prakhar0123.github.io/KARMA/home.html
+- Admin: https://prakhar0123.github.io/ejobz/
+- User: https://prakhar0123.github.io/ejobz/home.html
 
 ## Setup & Deployment Instructions:
 
