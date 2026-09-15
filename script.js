@@ -1,4 +1,4 @@
-const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz-x3_Eyp3vCcntNm11kWATjTSslEzdffIViYaO5a1KLt17JwO40XAypT8FycdXsLGINQ/exec';
+const WEB_APP_URL = 'YOUR_DEPLOYED_APPS_SCRIPT_WEB_APP_URL';
 
 let allJobs = [];
 let editingJobId = null;
